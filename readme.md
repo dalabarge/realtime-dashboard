@@ -68,7 +68,7 @@ The application ships with a Homestead configuration file which you can use to b
 vagrant up
 ```
 
-> **Need Help?** I had to update Virtualbox to the latest version and had to use 2048MB of RAM though honestly only 512MB should be needed. I also had to add my `/etc/hosts` file entry manually. So try some of these things if it just won't come up.
+> **Need Help?** You may need to manually checkout `laravel/homestead` into `vendor/laravel/homestead` to properly bring up Homestead seeing as it's a Composer dependency. I had to update Virtualbox to the latest version and had to use 2048MB of RAM though honestly only 512MB should be needed. I also had to add my `/etc/hosts` file entry manually. So try some of these things if it just won't come up.
 
 Next, you'll need to SSH into the Homestead Vagrant box and run the final Composer commands and remaining configuration:
 
@@ -79,6 +79,8 @@ composer install
 cp .env.example .env
 php artisan key:generate
 ```
+
+Now go to `http://dashboard.test` in your browser and if all works well then you should see "Real-time Dashboards" title card showing. Furthermore if you run `npm run watch` it should open `localhost:3000` in your browser and any changes to JS or SASS will reload the app. If you manage to get this far then you're in good shape and we can cover the rest in the workshop.
 
 ## Recommended Reading
 
