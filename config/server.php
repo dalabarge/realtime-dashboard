@@ -77,6 +77,7 @@ return [
     */
 
     'namespaces' => [
+        'App\\Dashboard\\Messages\\',
         'ArtianSDK\\Server\\Messages\\',
     ],
 ];

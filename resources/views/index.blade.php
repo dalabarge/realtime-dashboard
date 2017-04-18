@@ -11,6 +11,8 @@
         <div id="app" v-cloak>
           <div class="container">
             <intro></intro>
+            <connections :connected=connected :connect=connecting :connections=connections></connections>
+            <memory-usage :value=memory_usage></memory-usage>
           </div>
         </div>
         <script>

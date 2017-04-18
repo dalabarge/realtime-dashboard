@@ -1,5 +1,5 @@
 <template>
-  <div class="row justify-content-md-center mt-3">
+  <div class="row justify-content-md-center mt-3" @click="sayHello">
     <div class="col-md-6">
       <div class="card card-default">
         <div class="card-block">
@@ -13,5 +13,12 @@
 
 <script>
   export default {
+    methods: {
+      sayHello() {
+        Client.send('Say', {
+          phrase: 'Hello'
+        });
+      }
+    }
   }
 </script>

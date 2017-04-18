@@ -2,6 +2,7 @@
 
 namespace App\Dashboard\Commands;
 
+use App\Dashboard\Messages\MemoryUsage;
 use ArtisanSDK\Server\Entities\Command;
 
 class ReportMemoryUsage extends Command
@@ -11,10 +12,12 @@ class ReportMemoryUsage extends Command
      */
     public function run()
     {
-        $memory = memory_get_peak_usage(true);
-        $this->dispatcher()
-            ->broker()
-            ->log($this->format($memory));
+        $size = memory_get_usage();
+        $message = new MemoryUsage([
+            'value'     => $size,
+            'formatted' => $this->format($size),
+        ]);
+        $this->dispatcher()->broadcast($message);
     }
 
     /**
