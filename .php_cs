@@ -20,7 +20,6 @@ return Config::create()
         ],
         'binary_operator_spaces' => [
             'align_double_arrow' => true,
-            'align_equals' => true,
         ],
     ])
     ->setFinder(

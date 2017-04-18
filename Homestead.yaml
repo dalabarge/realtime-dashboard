@@ -11,8 +11,8 @@ keys:
     - ~/.ssh/id_rsa
 folders:
     -
-        map: ~/Code/realtime-dashboard
-        to: /home/vagrant/Code/realtime-dashboard
+        map: ~/Code
+        to: /home/vagrant/Code
 sites:
     -
         map: dashboard.test
