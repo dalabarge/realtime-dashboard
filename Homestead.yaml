@@ -1,0 +1,21 @@
+box: laravel/homestead
+provider: virtualbox
+name: workshop
+hostname: workshop
+ip: 192.168.10.10
+memory: 2048
+cpus: 1
+mariadb: true
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: ~/Code/realtime-dashboard
+        to: /home/vagrant/Code/realtime-dashboard
+sites:
+    -
+        map: dashboard.test
+        to: /home/vagrant/Code/realtime-dashboard/public
+databases:
+    - workshop_db
