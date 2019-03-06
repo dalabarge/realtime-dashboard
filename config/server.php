@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'max_connections' => env('SERVER_MAX_CONNECTIONS'),
+    'max_connections' => env('SERVER_MAX_CONNECTIONS', 0),
 
     /*
     |--------------------------------------------------------------------------
